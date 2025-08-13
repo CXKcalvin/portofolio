@@ -102,3 +102,58 @@ body {
 .box:hover{
   box-shadow: 0 0 20px blue ;
 }
+
+/* Mode HP (max 768px misalnya) */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    position: static;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background-color: gray;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  /* Saat show */
+  .box.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .media {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .media svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
