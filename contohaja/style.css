@@ -1,0 +1,123 @@
+*{
+    caret-color: transparent;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+
+/* bagian navbar */
+
+.hiro{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.img img{
+    width: 300px;
+    border-radius: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-inline: 20px;
+}
+
+.deskripsi button{
+    width: 20px;
+}
+
+.tentangku {
+  font-size: 1.5rem;
+  color: #fafafa;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #fafafa;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+.tentangku:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+
+/* bagian data diri */
+
+.data-diri{
+    color: white;
+}
+
+.data{
+    margin: 20px;
+    background: gray;
+    border-radius: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 200px;
+    
+}
+
+.judul{
+    display: flex;
+    justify-content: center;
+}
+
+.halaman{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* bagian footer */
+
+footer{
+    text-align: center;
+    background-color: rgb(20, 20, 20);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.media{
+    display: flex;
+    align-items: center;
+}
+
+
+.media svg{
+    margin-inline: 10px;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
+
+.media a{
+    text-decoration: none;
+}
+
+.posisikiri{
+    margin-left: 20px;
+    display: flex;
+    float: left;
+    align-items: center;
+}
