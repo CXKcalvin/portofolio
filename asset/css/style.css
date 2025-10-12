@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+}
+
+.container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+/* Bagian Foto */
+
+.photo {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/calvin.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+}
+
+/* Bagian Data Data */
+.box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.2);
+  transition:
+    transform 0.6s ease,
+    opacity 0.5s ease,
+    width 0.6s ease,
+    height 0.6s ease;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Menampilkan */
+.box.show {
+  opacity: 1;
+  width: 250px;
+  height: 120px;
+  transform: translate(var(--x), var(--y)) scale(1);
+}
+
+
+.box::before{
+    box-shadow: 0, 0, 0, 10px blue,
+                0, 0, 0, 20px blue,
+                0, 0, 0, 30px blue,
+                0, 0, 0, 40px blue,
+                0, 0, 0, 50px blue;
+}
+
+/* Posisi kotak */
+.top-left    { --x: -400px; --y: -300px; }
+.top-right   { --x:  90px; --y: -300px; }
+.bottom-left { --x: -500px; --y:  -70px; }
+.bottom-right{ --x:  190px; --y:  -70px; }
+.bottom{ --x:  -150px; --y:  150px; }
+
+.judul{
+    display: flex;
+    justify-content: center;
+}
+
+.nama{
+  margin-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.media{
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.media svg{
+  width: 70px;
+  height: 70px;
+}
+
+/* Bagian Di Cover */
+
+.photo:hover{
+  box-shadow: 0 0 20px blue ;
+}
+
+.box:hover{
+  box-shadow: 0 0 20px blue ;
+}
+
+/* Mode HP (max 768px misalnya) */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  .box {
+    position: static;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background-color: gray;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transform: scale(0.8);
+    opacity: 0;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+  }
+
+  /* Saat show */
+  .box.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .media {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .media svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
